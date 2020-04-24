@@ -9,8 +9,16 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
+const initialState = {
+  messages: [],
+  channels: ['general', 'react', 'paris'],
+  selectedChannel: 'general',
+  currentUser: prompt("What is your username?") || `anonymous${Math.floor(10 + (Math.random() * 90))}`,
+};
+
 const reducers = combineReducers({
   changeMe: (state = null, action) => state
+  // Add the identity reducer for every key in the state
 });
 
 // render an instance of the component in the DOM
