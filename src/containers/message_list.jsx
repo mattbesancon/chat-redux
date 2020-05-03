@@ -27,7 +27,7 @@ const initialState = {
 const MessageList = (props) => {
   return (
     <ul className="list-inline">
-      <Message key={initialState.messages.content[props]} />
+      <Message key={initialState.messages.content[props]}/>
     </ul>
   );
 };
