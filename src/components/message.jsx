@@ -1,10 +1,4 @@
-/* eslint jsx-a11y/alt-text: off */
-/* eslint jsx-a11y/no-noninteractive-element-interactions: off */
-
 import React from 'react';
-import { connect } from 'react-redux';
-
-import Message from '../components/message';
 
 const initialState = {
   messages: [
@@ -24,18 +18,12 @@ const initialState = {
   selectedChannel: 'general'
 };
 
-const MessageList = (props) => {
+const Message = (props) => {
   return (
-    <ul className="list-inline">
-      <Message key={initialState.messages.content[props]} />
-    </ul>
+    <li className="list-inline">
+      {initialState.messages.content[props]};
+    </li>
   );
 };
 
-function mapStateToProps(state) {
-  return {
-    messages: state.messages
-  };
-}
-
-export default connect(mapStateToProps)(MessageList);
+export default (Message);
